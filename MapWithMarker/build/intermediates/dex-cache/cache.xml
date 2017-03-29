@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.2.0_e1180dd5813942ab32751830f8f5bcf4266c0d2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.2.0_79f8c44518f7be0b74437d0aa41a4963384d36de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.0.2_fceb03d5cfaa385247bc7b1d3f575789713729c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.8.0_ebae4c1965713b9feb84f06f00b1df9c46c94cda.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.2.0_df329672584b9aef980a2ca385841f692a3c980c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.2.0_909a056cc6bc838f2a0bf4fa51d2c998e9dd6df4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-9.8.0_a23b3b30983839afed9bd344c16c4339fd2eda88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.2.0_9c8d4e490b08afd505da25c0c4765180ce3b49e1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.2.0_8e0cdc9b8942efa69e5e47190d325f52d6cb420a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.2.0_c7eb4cfdee694e858d172cb54ff4eafd789b9ac8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.8.0_5a68c003dd6e565369ce3f4adacd77ef1434f1ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.2.0_990852d34acd3bee1e99d5913c13f51bd25fbaeb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_42a44c10835035bdb0c78299aaa81ab57c587db5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.8.0_1deff9646a0babbcd73e38b23122570a08cc7ae2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_2b201413eacb346f22d2c9f126b886e0394a7e9a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.2.0_f816a013095706b5dc757ca2731989cb51560377.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.2.0_129aec84e40cd9378829df5934076c9b8e4c32a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.2.0_904b8796cbf611901b94db52f51f74e61345fc88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\Users\NHTI\AndroidStudioProjects\mapv2\MapWithMarker\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.2.0_8025d62ae08982622ba66ae75d6797465b470130.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Map With Marker</string>
+    <string name="title_activity_maps">Campus Map</string>
+    <string name="center">Map</string>
+    <string name="left">--</string>
+    <string name="right">--</string>
+</resources>
