@@ -10,5 +10,9 @@
     {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
         "source": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]
