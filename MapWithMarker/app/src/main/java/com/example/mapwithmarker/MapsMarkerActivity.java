@@ -15,13 +15,18 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.Marker;
+
 
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
  */
 public class MapsMarkerActivity extends AppCompatActivity
-        implements OnMapReadyCallback {
+        implements
+        OnMapReadyCallback {
+
 
     private static final String TAG = MapsMarkerActivity.class.getSimpleName();
 
@@ -31,40 +36,7 @@ public class MapsMarkerActivity extends AppCompatActivity
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_maps);
 
- /*       TabLayout tabLayout =
-                (TabLayout) findViewById(R.id.tab_layout);
 
-        final ViewPager viewPager =
-                (ViewPager) findViewById(R.id.map);
-        final PagerAdapter adapter = new TabPagerAdapter
-                (getSupportFragmentManager(),
-                        tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-
-        viewPager.addOnPageChangeListener(new
-                TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-        tabLayout.addOnTabSelectedListener(new
-                                                   TabLayout.OnTabSelectedListener() {
-                                                       @Override
-                                                       public void onTabSelected(TabLayout.Tab tab) {
-                                                           viewPager.setCurrentItem(tab.getPosition());
-                                                       }
-
-                                                       @Override
-                                                       public void onTabUnselected(TabLayout.Tab tab) {
-
-                                                       }
-
-                                                       @Override
-                                                       public void onTabReselected(TabLayout.Tab tab) {
-
-                                                       }
-
-                                                   });
-
-
-*/
 
 
         // Get the SupportMapFragment and request notification
@@ -100,12 +72,35 @@ public class MapsMarkerActivity extends AppCompatActivity
             Log.e(TAG, "Style parsing failed.");
         }
 
+        //UI Settings
+        UiSettings uiSettings = googleMap.getUiSettings();
+        uiSettings.setCompassEnabled(false);
+        uiSettings.setMapToolbarEnabled(false);
+
 
         // Add a marker in Sydney, Australia,
         // and move the map's camera to the same location.
         LatLng nhti = new LatLng(43.223881, -71.531651);
-        //googleMap.addMarker(new MarkerOptions().position(sydney)
-        //        .title("Marker in Sydney"));
+        LatLng little = new LatLng(43.222906, -71.531441);
+        LatLng grappone = new LatLng(43.222816, -71.532857);
+        LatLng mcauliffe = new LatLng(43.224111, -71.532598);
+        LatLng library = new LatLng(43.224308, -71.530318);
+        LatLng sweeney = new LatLng(43.224638, -71.531041);
+
+
+        //creating markers
+        googleMap.addMarker(new MarkerOptions().position(little)
+                .title("???"));
+        Marker mGrappone = googleMap.addMarker(new MarkerOptions().position(grappone)
+                .title("Grappone Hall").snippet("blahblahbalah"));
+        Marker mMcauliffe = googleMap.addMarker(new MarkerOptions().position(mcauliffe)
+                .title("Mcauliffe"));
+        Marker mLibrary = googleMap.addMarker(new MarkerOptions().position(library)
+                .title("Library"));
+        Marker mSweeney = googleMap.addMarker(new MarkerOptions().position(sweeney)
+                .title("Sweeney"));
+
+        // Zoom settings
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(nhti));
         googleMap.setMinZoomPreference(17);
 

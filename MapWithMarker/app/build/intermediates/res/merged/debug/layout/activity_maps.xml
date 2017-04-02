@@ -47,7 +47,6 @@
             android:layout_marginTop="4dp"
             android:background="@drawable/burger"
             android:contentDescription=""
-            android:onClick="onClick"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,RtlHardcoded" />
