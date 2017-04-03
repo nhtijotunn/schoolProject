@@ -56,6 +56,8 @@ ADDED from C:\Users\Johnny\Documents\GitHub\schoolProject\MapWithMarker\app\src\
 		ADDED from C:\Users\Johnny\Documents\GitHub\schoolProject\MapWithMarker\app\src\main\AndroidManifest.xml:17:13-58
 activity#com.example.mapwithmarker.MapsMarkerActivity
 ADDED from C:\Users\Johnny\Documents\GitHub\schoolProject\MapWithMarker\app\src\main\AndroidManifest.xml:20:9-28:20
+	android:screenOrientation
+		ADDED from C:\Users\Johnny\Documents\GitHub\schoolProject\MapWithMarker\app\src\main\AndroidManifest.xml:21:14-50
 	android:label
 		ADDED from C:\Users\Johnny\Documents\GitHub\schoolProject\MapWithMarker\app\src\main\AndroidManifest.xml:22:14-57
 	android:name

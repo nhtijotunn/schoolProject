@@ -156,6 +156,10 @@
         "source": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogue_lib.xml",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\layout\\dialogue_lib.xml"
+    },
+    {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_dialog_title_material.xml"
     },
@@ -422,6 +426,10 @@
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.2.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogue.xml",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\layout\\dialogue.xml"
     },
     {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
@@ -818,6 +826,10 @@
     {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogue_grapp.xml",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\layout\\dialogue_grapp.xml"
     },
     {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
