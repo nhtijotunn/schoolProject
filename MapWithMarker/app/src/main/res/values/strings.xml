@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Map With Marker</string>
     <string name="title_activity_maps">Campus Map</string>
-    <string name="center">Map</string>
-    <string name="left">--</string>
-    <string name="right">--</string>
+    <string name="dialog_message">Under construction.</string>
+    <string name="dialog_title">Polygon Click</string>
+    <string name="right">Ok</string>
+    <string name="left">Cancel</string>
 </resources>

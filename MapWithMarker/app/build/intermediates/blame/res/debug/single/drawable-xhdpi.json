@@ -8,6 +8,10 @@
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\header_logo.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-xhdpi\\header_logo.png"
+    },
+    {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_name.png",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
     }

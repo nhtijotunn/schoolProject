@@ -1,6 +1,8 @@
 package com.example.mapwithmarker;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,12 +13,14 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -118,23 +122,37 @@ public class MapsMarkerActivity extends AppCompatActivity
             @Override
             public void onPolygonClick(Polygon polygon) {
 
-                    final Dialog mapDialogue = new Dialog(MapsMarkerActivity.this, android.R.style.Theme_Black_NoTitleBar);
+                AlertDialog.Builder builder = new AlertDialog.Builder((new ContextThemeWrapper(MapsMarkerActivity.this, R.style.AlertDialogCustom)));
+
+                builder.setMessage(R.string.dialog_message);
+                builder.setTitle(R.string.dialog_title);
+
+                builder.setPositiveButton(R.string.right, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK button
+                    }
+                });
+                builder.setNegativeButton(R.string.left, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
+
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+/*                    final Dialog mapDialogue = new Dialog(MapsMarkerActivity.this, android.R.style.Theme_Black_NoTitleBar);
                     mapDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 0, 0, 0)));
                     mapDialogue.setContentView(R.layout.dialogue);
                     mapDialogue.setCancelable(true);
-                    mapDialogue.show();
+                    mapDialogue.setCanceledOnTouchOutside(true);
+                    mapDialogue.show();*/
             }
-
-
         });
-
-
-
     }
 
 
-    private void setPolygons(){
-
+    private void setPolygons() {
         pGrappone = mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(43.222555, -71.532639), new LatLng(43.222516, -71.532923),
                         new LatLng(43.222868, -71.533009), new LatLng(43.222953, -71.533175),
@@ -144,7 +162,7 @@ public class MapsMarkerActivity extends AppCompatActivity
 
         //makes it clickable/invisible
         pGrappone.setClickable(true);
-        pGrappone.setVisible (false);
+        pGrappone.setVisible(false);
 
         pLibrary = mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(43.224543, -71.530597), new LatLng(43.224599, -71.530254),
@@ -156,7 +174,17 @@ public class MapsMarkerActivity extends AppCompatActivity
                 .fillColor(Color.BLUE));
 
         pLibrary.setClickable(true);
-        pLibrary.setVisible (false);
+        pLibrary.setVisible(false);
+
+        pFarnum = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.223291, -71.531067), new LatLng(43.223217, -71.531521),
+                        new LatLng(43.223555, -71.531623), new LatLng(43.223594, -71.531403),
+                        new LatLng(43.223393, -71.531341), new LatLng(43.223430, -71.531116))
+                .strokeColor(Color.RED)
+                .fillColor(Color.BLUE));
+
+        pFarnum.setClickable(true);
+        pFarnum.setVisible(false);
 
         pMcAuliffe = mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(43.224030, -71.532228), new LatLng(43.223965, -71.532829),
@@ -164,8 +192,8 @@ public class MapsMarkerActivity extends AppCompatActivity
                 .strokeColor(Color.RED)
                 .fillColor(Color.BLUE));
 
-        pLibrary.setClickable(true);
-     /*   pLibrary.setVisible (false);*/
+        pMcAuliffe.setClickable(true);
+        pMcAuliffe.setVisible(false);
 
         pSweeney = mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(43.224842, -71.531207), new LatLng(43.224533, -71.531121),
@@ -175,8 +203,26 @@ public class MapsMarkerActivity extends AppCompatActivity
                 .strokeColor(Color.RED)
                 .fillColor(Color.BLUE));
 
-        pLibrary.setClickable(true);
-        pLibrary.setVisible (false);
+        pSweeney.setClickable(true);
+        pSweeney.setVisible(false);
+
+        pLittle = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.222871, -71.532212), new LatLng(43.223053, -71.531180),
+                        new LatLng(43.222578, -71.530919), new LatLng(43.222472, -71.531367))
+                .strokeColor(Color.RED)
+                .fillColor(Color.BLUE));
+
+        pLittle.setClickable(true);
+        pLittle.setVisible(false);
+
+        pMacRury = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.223246, -71.531780), new LatLng(43.223137, -71.532446),
+                        new LatLng(43.223627, -71.532601), new LatLng(43.223793, -71.531866))
+                .strokeColor(Color.RED)
+                .fillColor(Color.BLUE));
+
+        pMacRury.setClickable(true);
+        pMacRury.setVisible(false);
 
     }
 
@@ -186,19 +232,25 @@ public class MapsMarkerActivity extends AppCompatActivity
         LatLng grappone = new LatLng(43.222816, -71.532857);
         LatLng mcauliffe = new LatLng(43.224111, -71.532598);
         LatLng library = new LatLng(43.224308, -71.530318);
-        LatLng sweeney = new LatLng(43.224638, -71.531041);
+        LatLng sweeney = new LatLng(43.224551, -71.531524);
+        LatLng mcrury = new LatLng(43.223426, -71.532185);
+        LatLng farnum = new LatLng(43.223340, -71.531418);
 
         //filling the markers
         mLittle = mMap.addMarker(new MarkerOptions().position(little)
-                .title("Little"));
+                .title("Little Hall").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
         mGrappone = mMap.addMarker(new MarkerOptions().position(grappone)
-                .title("Grappone Hall").snippet("blahblahbalah"));
+                .title("Grappone Hall").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
         mMcauliffe = mMap.addMarker(new MarkerOptions().position(mcauliffe)
-                .title("McAuliffe"));
+                .title("McAuliffe").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
         mLibrary = mMap.addMarker(new MarkerOptions().position(library)
-                .title("Library"));
+                .title("Library").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
         mSweeney = mMap.addMarker(new MarkerOptions().position(sweeney)
-                .title("Sweeney"));
+                .title("Sweeney Hall").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
+        mMacrury = mMap.addMarker(new MarkerOptions().position(mcrury)
+                .title("MacRury Hall").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
+        mFarnum = mMap.addMarker(new MarkerOptions().position(farnum)
+                .title("Farnum Hall").icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker)));
 
     }
 
