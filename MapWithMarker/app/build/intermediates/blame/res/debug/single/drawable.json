@@ -60,6 +60,10 @@
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_little.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable\\ic_little.png"
+    },
+    {
         "merged": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
@@ -172,8 +176,16 @@
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.2.0\\res\\drawable\\design_snackbar_background.xml"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_macrury.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable\\ic_macrury.png"
+    },
+    {
         "merged": "C:\\Users\\NHTI\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ninepatch_bubble.9.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable\\ninepatch_bubble.9.png"
     },
     {
         "merged": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
@@ -544,6 +556,10 @@
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_sweeney.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable\\ic_sweeney.png"
+    },
+    {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
@@ -766,6 +782,10 @@
     {
         "merged": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_farnum.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable\\ic_farnum.png"
     },
     {
         "merged": "C:\\Users\\NHTI\\AndroidStudioProjects\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",

@@ -12,6 +12,16 @@
       ]
     },
 
+<!--
+   {
+    \"featureType\": \"landscape.man_made\",
+    \"elementType\": \"geometry.fill\",
+    \"stylers\": [
+      { \"color\": \"#66ff66\" }
+      ]
+   },
+-->
+
 <!--Bus Stops-->
 <!--    {
       \"featureType\": \"transit\",

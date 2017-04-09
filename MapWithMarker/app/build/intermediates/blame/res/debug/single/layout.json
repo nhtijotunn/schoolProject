@@ -244,6 +244,10 @@
         "source": "C:\\Users\\NHTI\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_info_window.xml",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\layout\\custom_info_window.xml"
+    },
+    {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_screen_simple.xml"
     },
@@ -422,10 +426,6 @@
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.2.0\\res\\layout\\design_navigation_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogue.xml",
-        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\layout\\dialogue.xml"
     },
     {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
@@ -650,6 +650,10 @@
     {
         "merged": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\Johnny\\AndroidStudioProjects\\mapv2\\MapWithMarker\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_info_contents.xml",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\layout\\custom_info_contents.xml"
     },
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
