@@ -1,5 +1,6 @@
 package com.example.mapwithmarker;
 import android.graphics.Color;
+import android.os.Build;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -147,84 +148,84 @@ public class MapSetup {
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_little))
                 .anchor(0.5f, 0.5f)
                 .title("Little Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hLittle)+
                         "\nLittle's Content\n" +
                         "Content\n"));
         MapsMarkerActivity.mGrappone = mMap.addMarker(new MarkerOptions().position(grappone)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("Grappone Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hGrappone)+
                         "\nGrappone's Content\n" +
                         "Content\n"));
         MapsMarkerActivity.mMcauliffe = mMap.addMarker(new MarkerOptions().position(mcauliffe)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("McAuliffe-Shepard Discovery Center\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hMcAuliffe)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mLibrary = mMap.addMarker(new MarkerOptions().position(library)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_library))
                 .anchor(0.5f, 0.5f)
                 .title("Library")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hLibrary)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mSweeney = mMap.addMarker(new MarkerOptions().position(sweeney)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_sweeney))
                 .anchor(0.5f, 0.5f)
                 .title("Sweeney Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hStudentCenter)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity. mMacrury = mMap.addMarker(new MarkerOptions().position(mcrury)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_macrury))
                 .anchor(0.5f, 0.5f)
                 .title("MacRury Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hMacRury)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mFarnum = mMap.addMarker(new MarkerOptions().position(farnum)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_farnum))
                 .anchor(0.5f, 0.5f)
                 .title("Farnum Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hFarnum)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mStrout = mMap.addMarker(new MarkerOptions().position(stroutLocation)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("Strout Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mSouth = mMap.addMarker(new MarkerOptions().position(southLocation)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("South Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mNorth = mMap.addMarker(new MarkerOptions().position(northLocation)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("North Hall\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mStudentCenter = mMap.addMarker(new MarkerOptions().position(studentCenterLocation)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("Student Center\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.hStudentCenter)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mTechnology = mMap.addMarker(new MarkerOptions().position(new LatLng(43.223524, -71.530904))
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
                 .anchor(0.5f, 0.5f)
                 .title("Community College System Office\n")
-                .snippet(dotwBuilder()+
+                .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
 
@@ -245,11 +246,11 @@ public class MapSetup {
         mMap.setLatLngBoundsForCameraTarget(campus);
     }
 
-    public static String dotwBuilder(){
+    public static String dotwBuilder(int day,String[] building){
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
         Date d = new Date();
         String dayOfTheWeek = sdf.format(d);
-        return dayOfTheWeek/* + ": "*/;
+        return dayOfTheWeek + ": " + building[day-1];
     }
 
 
