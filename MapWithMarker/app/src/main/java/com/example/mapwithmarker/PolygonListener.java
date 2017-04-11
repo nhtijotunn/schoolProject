@@ -43,6 +43,9 @@ public class PolygonListener {
                         mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mMacrury.getPosition()));
                         MapsMarkerActivity.mMacrury.showInfoWindow();
                         break;
+                    case 7:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mStudentCenter.getPosition()));
+                        MapsMarkerActivity.mStudentCenter.showInfoWindow();
                 }//end of switch statement
             }
         });

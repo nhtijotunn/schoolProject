@@ -60,20 +60,20 @@ public class MapsMarkerActivity extends AppCompatActivity
 
             int badge;
             // Use the equals() method on a Marker to check for equals.  Do not use ==.
-/*            if (marker.equals(mFarnum)) {
-                badge = R.drawable.ic_farnum;
-            } else if (marker.equals(mAdelaide)) {
-                badge = R.drawable.badge_sa;
-            } else if (marker.equals(mSydney)) {
-                badge = R.drawable.badge_nsw;
-            } else if (marker.equals(mMelbourne)) {
-                badge = R.drawable.badge_victoria;
-            } else if (marker.equals(mPerth)) {
-                badge = R.drawable.badge_wa;
-            } else {*/
+            if (marker.equals(mStudentCenter)) {
+                badge = R.drawable.student_center_photo;
+            } else if (marker.equals(mFarnum)) {
+                badge = R.drawable.farnum_photo;
+            } else if (marker.equals(mSweeney)) {
+                badge = R.drawable.sweeney_photo;
+            } else if (marker.equals(mGrappone)) {
+                badge = R.drawable.grappone_photo;
+            } else if (marker.equals(mLittle)) {
+                badge = R.drawable.little_photo;
+            } else {
             // Passing 0 to setImageResource will clear the image view.
             badge = 0;
-            //}
+            }
             ((ImageView) view.findViewById(R.id.badge)).setImageResource(badge);
 
             String title = marker.getTitle();
@@ -107,10 +107,11 @@ public class MapsMarkerActivity extends AppCompatActivity
 
     private final LatLng nhti = new LatLng(43.223881, -71.531651);
 
-    public static Marker mSweeney, mMcauliffe, mMacrury, mFarnum, mLibrary, mLittle, mGrappone;
+    public static Marker mSweeney, mMcauliffe, mMacrury, mFarnum, mLibrary, mLittle, mGrappone, mStrout, mSouth,
+    mNorth, mPolice, mSafetey, mStudentCenter, mTechnology;
 
     public static Polygon pLibrary, pGrappone, pChildFamily, pEastAnnex, pLittle, pFarnum, pMacRury,
-                          pMcAuliffe, pSweeney;
+                          pMcAuliffe, pSweeney, pStudentCenter;
 
     private static final String TAG = MapsMarkerActivity.class.getSimpleName();
 

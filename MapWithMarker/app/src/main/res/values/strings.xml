@@ -5,4 +5,5 @@
     <string name="dialog_title">Polygon Click</string>
     <string name="right">Ok</string>
     <string name="left">Cancel</string>
+    <string name="day">Today</string>
 </resources>

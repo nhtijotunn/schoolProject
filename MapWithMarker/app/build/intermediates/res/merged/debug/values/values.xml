@@ -746,6 +746,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="day">Today</string>
     <string name="dialog_message">Under construction.</string>
     <string name="dialog_title">Polygon Click</string>
     <string name="google_maps_key" translatable="false">AIzaSyBTfI9OdIswD6crGetQRaKmKa9aHHlJNwo</string>
