@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="NHTI Campus">
+        <menu>
+        <item
+            android:id="@+id/nav_sweeney"
+            android:icon="@drawable/ic_sweeney"
+            android:title="Sweeney Hall" />
+        <item
+            android:id="@+id/nav_student_center"
+            android:icon="@drawable/ic_test"
+            android:title="Student Center" />
+        <item
+            android:id="@+id/nav_library"
+            android:icon="@drawable/ic_library"
+            android:title="Library" />
+        <item
+            android:id="@+id/nav_little"
+            android:icon="@drawable/ic_little"
+            android:title="Little Hall" />
+        <item
+            android:id="@+id/nav_macrury"
+            android:icon="@drawable/ic_macrury"
+            android:title="MacRury Hall" />
+        </menu>
+    </item>
+<!--
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_sweeney"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_sweeney"
+                android:title="Send" />
+        </menu>
+    </item>
+-->
+
+</menu>

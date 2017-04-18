@@ -1,20 +1,24 @@
 package com.example.mapwithmarker;
 
-
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
@@ -28,7 +32,7 @@ public class MapsMarkerActivity extends AppCompatActivity
         implements
         OnMapReadyCallback {
 
-    ///////////////////////////////////////////////////////////////////////////
+    /////////////////CUSTOM INFO WINDOW////////////////////////////////
 
     class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
@@ -59,7 +63,7 @@ public class MapsMarkerActivity extends AppCompatActivity
         private void render(Marker marker, View view) {
 
             int badge;
-            // Use the equals() method on a Marker to check for equals.  Do not use ==.
+
             if (marker.equals(mStudentCenter)) {
                 badge = R.drawable.student_center_photo;
             } else if (marker.equals(mFarnum)) {
@@ -104,14 +108,16 @@ public class MapsMarkerActivity extends AppCompatActivity
 
 
     private GoogleMap mMap;
+    private NavigationView mNavigationView;
+    private DrawerLayout mDrawerLayout;
 
     private final LatLng nhti = new LatLng(43.223881, -71.531651);
 
     public static Marker mSweeney, mMcauliffe, mMacrury, mFarnum, mLibrary, mLittle, mGrappone, mStrout, mSouth,
-    mNorth, mPolice, mSafetey, mStudentCenter, mTechnology;
+    mNorth, mPolice, mSafetey, mStudentCenter, mTechnology, mChild, mEast;
 
-    public static Polygon pLibrary, pGrappone, pChildFamily, pEastAnnex, pLittle, pFarnum, pMacRury,
-                          pMcAuliffe, pSweeney, pStudentCenter;
+    public static Polygon pLibrary, pGrappone, pPolice, pNorth, pSouth, pStrout, pLittle, pFarnum, pMacRury,
+                          pMcAuliffe, pSweeney, pStudentCenter, pTechnology, pSafety, pChild, pEast;
 
     private static final String TAG = MapsMarkerActivity.class.getSimpleName();
 
@@ -125,7 +131,24 @@ public class MapsMarkerActivity extends AppCompatActivity
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-    }
+
+        //////////////////NAVIGATION DRAWER////////////////////
+
+        ImageButton burger = (ImageButton)findViewById(R.id.burger);
+        mNavigationView = (NavigationView)findViewById(R.id.nav_view);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationView.setItemIconTintList(null);
+        setNavListener();
+        //set Burger
+        burger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawerLayout.openDrawer(mNavigationView);
+            }
+        });
+        //////////////////////////////////////////////////////
+
+    }//onCreate
 
     /**
      * Manipulates the map when it's available.
@@ -162,4 +185,59 @@ public class MapsMarkerActivity extends AppCompatActivity
         // OnClick Listener Testing
         PolygonListener.setListener(mMap);
     }
+
+    public void setNavListener(){
+        mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                //Toast.makeText(MapsMarkerActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_sweeney:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                            .target(mSweeney.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mSweeney.showInfoWindow();
+                        break;
+                    case R.id.nav_student_center:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mStudentCenter.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mStudentCenter.showInfoWindow();
+                        break;
+                    case R.id.nav_library:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mLibrary.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mLibrary.showInfoWindow();
+                        break;
+                    case R.id.nav_little:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mLittle.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mLittle.showInfoWindow();
+                        break;
+                    case R.id.nav_macrury:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mMacrury.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mMacrury.showInfoWindow();
+                        break;
+                    default:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mGrappone.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mGrappone.showInfoWindow();
+                        break;
+
+                }//end of switch statement
+                return true;
+            }
+        });
+
+
+    }
+
+
+
+
 }

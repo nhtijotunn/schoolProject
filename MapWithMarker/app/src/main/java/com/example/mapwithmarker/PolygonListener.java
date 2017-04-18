@@ -1,5 +1,11 @@
 package com.example.mapwithmarker;
 
+import android.support.v4.widget.DrawerLayout;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageButton;
+import android.widget.ListView;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Polygon;
@@ -46,9 +52,46 @@ public class PolygonListener {
                     case 7:
                         mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mStudentCenter.getPosition()));
                         MapsMarkerActivity.mStudentCenter.showInfoWindow();
+                        break;
+                    case 8:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mTechnology.getPosition()));
+                        MapsMarkerActivity.mTechnology.showInfoWindow();
+                        break;
+                    case 9:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mSafetey.getPosition()));
+                        MapsMarkerActivity.mSafetey.showInfoWindow();
+                        break;
+                    case 10:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mPolice.getPosition()));
+                        MapsMarkerActivity.mPolice.showInfoWindow();
+                        break;
+                    case 11:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mNorth.getPosition()));
+                        MapsMarkerActivity.mNorth.showInfoWindow();
+                        break;
+                    case 12:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mSouth.getPosition()));
+                        MapsMarkerActivity.mSouth.showInfoWindow();
+                        break;
+                    case 13:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mStrout.getPosition()));
+                        MapsMarkerActivity.mStrout.showInfoWindow();
+                        break;
+                    case 14:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mChild.getPosition()));
+                        MapsMarkerActivity.mChild.showInfoWindow();
+                        break;
+                    case 15:
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mEast.getPosition()));
+                        MapsMarkerActivity.mEast.showInfoWindow();
+                        break;
+
+
                 }//end of switch statement
             }
         });
 
     }
+
+
 }

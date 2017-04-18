@@ -15,6 +15,7 @@ import com.example.mapwithmarker.MapsMarkerActivity;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * Created by Johnny on 4/7/2017.
@@ -108,7 +109,93 @@ public class MapSetup {
 
         MapsMarkerActivity.pStudentCenter.setClickable(true);
 
-        invisiblePolygons();
+        MapsMarkerActivity.pTechnology = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.223727, -71.530832), new LatLng(43.223362, -71.530725),
+                        new LatLng(43.223326, -71.530943), new LatLng(43.223693, -71.531049))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pTechnology.setClickable(true);
+
+          MapsMarkerActivity.pSafety = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.224366, -71.534039), new LatLng(43.224283, -71.533990),
+                        new LatLng(43.224227, -71.534166), new LatLng(43.224311, -71.534214))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pSafety.setClickable(true);
+
+        MapsMarkerActivity.pPolice = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.225963, -71.531917), new LatLng(43.225893, -71.531937),
+                        new LatLng(43.225846, -71.531649), new LatLng(43.225579, -71.531728),
+                        new LatLng(43.225651, -71.532184), new LatLng(43.225576, -71.532206),
+                        new LatLng(43.225680, -71.532851), new LatLng(43.225722, -71.532838),
+                        new LatLng(43.225790, -71.533263), new LatLng(43.225709, -71.533288),
+                        new LatLng(43.225811, -71.533918), new LatLng(43.226083, -71.533835),
+                        new LatLng(43.225981, -71.533205), new LatLng(43.225887, -71.533234),
+                        new LatLng(43.225788, -71.532603), new LatLng(43.225852, -71.532584),
+                        new LatLng(43.225795, -71.532229), new LatLng(43.226004, -71.532166))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pPolice.setClickable(true);
+
+        MapsMarkerActivity.pNorth = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.226489, -71.530997), new LatLng(43.226202, -71.530744),
+                        new LatLng(43.226527, -71.530050), new LatLng(43.226414, -71.529948),
+                        new LatLng(43.226117, -71.530585), new LatLng(43.226081, -71.530553),
+                        new LatLng(43.225763, -71.531232), new LatLng(43.225872, -71.531328),
+                        new LatLng(43.226097, -71.530847), new LatLng(43.226424, -71.531136))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pNorth.setClickable(true);
+
+        MapsMarkerActivity.pSouth = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.221036, -71.532545), new LatLng(43.220497, -71.532548),
+                        new LatLng(43.220498, -71.532712), new LatLng(43.221037, -71.532705))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pSouth.setClickable(true);
+
+        MapsMarkerActivity.pStrout = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.221679, -71.531960), new LatLng(43.221593, -71.531852),
+                        new LatLng(43.221262, -71.532346), new LatLng(43.221349, -71.532458))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pStrout.setClickable(true);
+
+        MapsMarkerActivity.pChild = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.222946, -71.530242), new LatLng(43.222793, -71.530202),
+                        new LatLng(43.222782, -71.530275), new LatLng(43.222721, -71.530259),
+                        new LatLng(43.222690, -71.530488), new LatLng(43.222904, -71.530541))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pChild.setClickable(true);
+
+        MapsMarkerActivity.pEast = mMap.addPolygon(new PolygonOptions()
+                .add(new LatLng(43.223690, -71.530023), new LatLng(43.223505, -71.529958),
+                        new LatLng(43.223490, -71.530067), new LatLng(43.223672, -71.530129))
+                .strokeColor(R.color.outline)
+                .strokeWidth(1)
+                .fillColor(R.color.fill));
+
+        MapsMarkerActivity.pEast.setClickable(true);
+
+
+
+
+        //invisiblePolygons();
 
     }
 
@@ -152,14 +239,14 @@ public class MapSetup {
                         "\nLittle's Content\n" +
                         "Content\n"));
         MapsMarkerActivity.mGrappone = mMap.addMarker(new MarkerOptions().position(grappone)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_grappone))
                 .anchor(0.5f, 0.5f)
                 .title("Grappone Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.hGrappone)+
                         "\nGrappone's Content\n" +
                         "Content\n"));
         MapsMarkerActivity.mMcauliffe = mMap.addMarker(new MarkerOptions().position(mcauliffe)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
                 .anchor(0.5f, 0.5f)
                 .title("McAuliffe-Shepard Discovery Center\n")
                 .snippet(dotwBuilder(day, BuildingHours.hMcAuliffe)+
@@ -194,42 +281,76 @@ public class MapSetup {
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mStrout = mMap.addMarker(new MarkerOptions().position(stroutLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
                 .anchor(0.5f, 0.5f)
                 .title("Strout Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mSouth = mMap.addMarker(new MarkerOptions().position(southLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
                 .anchor(0.5f, 0.5f)
                 .title("South Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mNorth = mMap.addMarker(new MarkerOptions().position(northLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
                 .anchor(0.5f, 0.5f)
                 .title("North Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mStudentCenter = mMap.addMarker(new MarkerOptions().position(studentCenterLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
                 .anchor(0.5f, 0.5f)
                 .title("Student Center\n")
                 .snippet(dotwBuilder(day, BuildingHours.hStudentCenter)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mTechnology = mMap.addMarker(new MarkerOptions().position(new LatLng(43.223524, -71.530904))
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.test_marker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_ctc))
                 .anchor(0.5f, 0.5f)
                 .title("Community College System Office\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
 
-        }
+        MapsMarkerActivity.mPolice = mMap.addMarker(new MarkerOptions().position(policeLocation)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .anchor(0.5f, 0.5f)
+                .title("Police Standards and Training\n")
+                .snippet(dotwBuilder(day, BuildingHours.template)+
+                        "\nContent\n" +
+                        "Content\n"));
+
+        MapsMarkerActivity.mSafetey = mMap.addMarker(new MarkerOptions().position(safetyLocation)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_campussafety))
+                .anchor(0.5f, 0.5f)
+                .title("Campus Safety\n")
+                .snippet(dotwBuilder(day, BuildingHours.template)+
+                        "\nContent\n" +
+                        "Content\n"));
+
+        MapsMarkerActivity.mChild = mMap.addMarker(new MarkerOptions().position(new LatLng(43.222839, -71.530370))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .anchor(0.5f, 0.5f)
+                .title("Child & Family Development Center\n")
+                .snippet(dotwBuilder(day, BuildingHours.template)+
+                        "\nContent\n" +
+                        "Content\n"));
+
+        MapsMarkerActivity.mEast = mMap.addMarker(new MarkerOptions().position(new LatLng(43.223589, -71.530042))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .anchor(0.5f, 0.5f)
+                .title("East Annex\n")
+                .snippet(dotwBuilder(day, BuildingHours.template)+
+                        "\nContent\n" +
+                        "Content\n"));
+
+
+
+    }
 
     public static void uiSettings(GoogleMap mMap, LatLng nhti){
         UiSettings uiSettings = mMap.getUiSettings();
