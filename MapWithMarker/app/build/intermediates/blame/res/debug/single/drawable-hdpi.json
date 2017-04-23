@@ -8,6 +8,14 @@
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_little.png"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_child.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_child.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_north.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_north.png"
+    },
+    {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_macrury.png",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_macrury.png"
     },
@@ -50,6 +58,10 @@
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_ctc.png",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_ctc.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_south.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_south.png"
     },
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_sweeney.png",

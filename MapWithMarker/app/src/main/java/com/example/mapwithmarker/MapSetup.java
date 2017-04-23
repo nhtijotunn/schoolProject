@@ -1,6 +1,4 @@
 package com.example.mapwithmarker;
-import android.graphics.Color;
-import android.os.Build;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -8,18 +6,14 @@ import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolygonOptions;
-import com.example.mapwithmarker.MapsMarkerActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Map;
 
-/**
- * Created by Johnny on 4/7/2017.
- */
 
 public class MapSetup {
 
@@ -59,14 +53,14 @@ public class MapSetup {
 
         MapsMarkerActivity.pFarnum.setClickable(true);
 
-        MapsMarkerActivity.pMcAuliffe = mMap.addPolygon(new PolygonOptions()
+        MapsMarkerActivity.pMcauliffe = mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(43.224030, -71.532228), new LatLng(43.223965, -71.532829),
                         new LatLng(43.224307, -71.532901), new LatLng(43.224370, -71.532305))
                 .strokeColor(R.color.outline)
                 .strokeWidth(1)
                 .fillColor(R.color.fill));
 
-        MapsMarkerActivity.pMcAuliffe.setClickable(true);
+        MapsMarkerActivity.pMcauliffe.setClickable(true);
 
         MapsMarkerActivity.pSweeney = mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(43.224842, -71.531207), new LatLng(43.224533, -71.531121),
@@ -98,11 +92,11 @@ public class MapSetup {
         MapsMarkerActivity.pMacRury.setClickable(true);
 
         MapsMarkerActivity.pStudentCenter = mMap.addPolygon(new PolygonOptions()
-                .add(new LatLng(43.225084, -71.530815), new LatLng(43.224864, -71.530334),
-                        new LatLng(43.224546, -71.530668), new LatLng(43.224446, -71.530830),
-                        new LatLng(43.224432, -71.530909), new LatLng(43.224457, -71.531008),
-                        new LatLng(43.224532, -71.531113), new LatLng(43.224769, -71.531169),
-                        new LatLng(43.224788, -71.531070))
+                .add(new LatLng(43.225084, -71.530816), new LatLng(43.224861, -71.530335),
+                        new LatLng(43.224545, -71.530666), new LatLng(43.224450, -71.530829),
+                        new LatLng(43.224433, -71.530915), new LatLng(43.224466, -71.531017),
+                        new LatLng(43.224536, -71.531116), new LatLng(43.224773, -71.531173),
+                        new LatLng(43.224787, -71.531071))
                 .strokeColor(R.color.outline)
                 .strokeWidth(1)
                 .fillColor(R.color.fill));
@@ -183,19 +177,12 @@ public class MapSetup {
 
         MapsMarkerActivity.pChild.setClickable(true);
 
-        MapsMarkerActivity.pEast = mMap.addPolygon(new PolygonOptions()
-                .add(new LatLng(43.223690, -71.530023), new LatLng(43.223505, -71.529958),
-                        new LatLng(43.223490, -71.530067), new LatLng(43.223672, -71.530129))
-                .strokeColor(R.color.outline)
-                .strokeWidth(1)
-                .fillColor(R.color.fill));
-
-        MapsMarkerActivity.pEast.setClickable(true);
 
 
 
 
-        //invisiblePolygons();
+
+        invisiblePolygons();
 
     }
 
@@ -205,11 +192,17 @@ public class MapSetup {
         MapsMarkerActivity.pLittle.setVisible(false);
         MapsMarkerActivity.pSweeney.setVisible(false);
         MapsMarkerActivity.pFarnum.setVisible(false);
-        MapsMarkerActivity.pMcAuliffe.setVisible(false);
+        MapsMarkerActivity.pMcauliffe.setVisible(false);
         MapsMarkerActivity.pGrappone.setVisible(false);
         MapsMarkerActivity.pLibrary.setVisible(false);
         MapsMarkerActivity.pStudentCenter.setVisible(false);
-
+        MapsMarkerActivity.pTechnology.setVisible(false);
+        MapsMarkerActivity.pChild.setVisible(false);
+        MapsMarkerActivity.pPolice.setVisible(false);
+        MapsMarkerActivity.pSafety.setVisible(false);
+        MapsMarkerActivity.pNorth.setVisible(false);
+        MapsMarkerActivity.pSouth.setVisible(false);
+        MapsMarkerActivity.pStrout.setVisible(false);
     }
 
     public static void setMarkers(GoogleMap mMap) {
@@ -288,14 +281,14 @@ public class MapSetup {
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mSouth = mMap.addMarker(new MarkerOptions().position(southLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_south))
                 .anchor(0.5f, 0.5f)
                 .title("South Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mNorth = mMap.addMarker(new MarkerOptions().position(northLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_north))
                 .anchor(0.5f, 0.5f)
                 .title("North Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
@@ -311,7 +304,7 @@ public class MapSetup {
         MapsMarkerActivity.mTechnology = mMap.addMarker(new MarkerOptions().position(new LatLng(43.223524, -71.530904))
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_ctc))
                 .anchor(0.5f, 0.5f)
-                .title("Community College System Office\n")
+                .title("College System Office\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
@@ -324,7 +317,7 @@ public class MapSetup {
                         "\nContent\n" +
                         "Content\n"));
 
-        MapsMarkerActivity.mSafetey = mMap.addMarker(new MarkerOptions().position(safetyLocation)
+        MapsMarkerActivity.mSafety = mMap.addMarker(new MarkerOptions().position(safetyLocation)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_campussafety))
                 .anchor(0.5f, 0.5f)
                 .title("Campus Safety\n")
@@ -333,22 +326,12 @@ public class MapSetup {
                         "Content\n"));
 
         MapsMarkerActivity.mChild = mMap.addMarker(new MarkerOptions().position(new LatLng(43.222839, -71.530370))
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_child))
                 .anchor(0.5f, 0.5f)
-                .title("Child & Family Development Center\n")
+                .title("Child & Family Development\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
                         "\nContent\n" +
                         "Content\n"));
-
-        MapsMarkerActivity.mEast = mMap.addMarker(new MarkerOptions().position(new LatLng(43.223589, -71.530042))
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
-                .anchor(0.5f, 0.5f)
-                .title("East Annex\n")
-                .snippet(dotwBuilder(day, BuildingHours.template)+
-                        "\nContent\n" +
-                        "Content\n"));
-
-
 
     }
 
@@ -362,7 +345,7 @@ public class MapSetup {
         mMap.setMinZoomPreference(17);
 
         LatLngBounds campus = new LatLngBounds(
-                new LatLng(43.221527, -71.533355), new LatLng(43.227141, -71.527139));
+                new LatLng(43.220017, -71.534695), new LatLng(43.227141, -71.527139));
         // Constrain the camera target to the NHTI bounds.
         mMap.setLatLngBoundsForCameraTarget(campus);
     }
@@ -372,6 +355,40 @@ public class MapSetup {
         Date d = new Date();
         String dayOfTheWeek = sdf.format(d);
         return dayOfTheWeek + ": " + building[day-1];
+    }
+
+    public static int setPhoto (Marker marker){
+        int badge;
+
+        if (marker.equals(MapsMarkerActivity.mStudentCenter)) {
+            badge = R.drawable.student_center_photo;
+        } else if (marker.equals(MapsMarkerActivity.mFarnum)) {
+            badge = R.drawable.farnum_photo;
+        } else if (marker.equals(MapsMarkerActivity.mSweeney)) {
+            badge = R.drawable.sweeney_photo;
+        } else if (marker.equals(MapsMarkerActivity.mGrappone)) {
+            badge = R.drawable.grappone_photo;
+        } else if (marker.equals(MapsMarkerActivity.mLittle)) {
+            badge = R.drawable.little_photo;
+        } else if (marker.equals(MapsMarkerActivity.mSouth)) {
+            badge = R.drawable.south_photo;
+        } else if (marker.equals(MapsMarkerActivity.mNorth)) {
+            badge = R.drawable.north_photo;
+        } else if (marker.equals(MapsMarkerActivity.mStrout)) {
+            badge = R.drawable.strout_photo;
+        } else if (marker.equals(MapsMarkerActivity.mMacrury)) {
+            badge = R.drawable.macrury_photo;
+        } else if (marker.equals(MapsMarkerActivity.mChild)) {
+            badge = R.drawable.child_photo;
+        } else if (marker.equals(MapsMarkerActivity.mTechnology)) {
+            badge = R.drawable.ctc_photo;
+        } else if (marker.equals(MapsMarkerActivity.mSafety)) {
+            badge = R.drawable.safety_photo;
+        } else {
+            // Passing 0 to setImageResource will clear the image view.
+            badge = 0;
+        }
+        return badge;
     }
 
 

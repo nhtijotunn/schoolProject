@@ -62,23 +62,8 @@ public class MapsMarkerActivity extends AppCompatActivity
 
         private void render(Marker marker, View view) {
 
-            int badge;
-
-            if (marker.equals(mStudentCenter)) {
-                badge = R.drawable.student_center_photo;
-            } else if (marker.equals(mFarnum)) {
-                badge = R.drawable.farnum_photo;
-            } else if (marker.equals(mSweeney)) {
-                badge = R.drawable.sweeney_photo;
-            } else if (marker.equals(mGrappone)) {
-                badge = R.drawable.grappone_photo;
-            } else if (marker.equals(mLittle)) {
-                badge = R.drawable.little_photo;
-            } else {
-            // Passing 0 to setImageResource will clear the image view.
-            badge = 0;
-            }
-            ((ImageView) view.findViewById(R.id.badge)).setImageResource(badge);
+            //setting the photo from MapSetup
+            ((ImageView) view.findViewById(R.id.badge)).setImageResource(MapSetup.setPhoto(marker));
 
             String title = marker.getTitle();
             TextView titleUi = ((TextView) view.findViewById(R.id.title));
@@ -100,7 +85,7 @@ public class MapsMarkerActivity extends AppCompatActivity
             } else {
                 snippetUi.setText("");
             }
-        }
+        }// render
     }
 
 
@@ -111,13 +96,14 @@ public class MapsMarkerActivity extends AppCompatActivity
     private NavigationView mNavigationView;
     private DrawerLayout mDrawerLayout;
 
-    private final LatLng nhti = new LatLng(43.223881, -71.531651);
+    public final LatLng nhti = new LatLng(43.223881, -71.531651);
+
 
     public static Marker mSweeney, mMcauliffe, mMacrury, mFarnum, mLibrary, mLittle, mGrappone, mStrout, mSouth,
-    mNorth, mPolice, mSafetey, mStudentCenter, mTechnology, mChild, mEast;
+    mNorth, mPolice, mSafety, mStudentCenter, mTechnology, mChild, mEast;
 
     public static Polygon pLibrary, pGrappone, pPolice, pNorth, pSouth, pStrout, pLittle, pFarnum, pMacRury,
-                          pMcAuliffe, pSweeney, pStudentCenter, pTechnology, pSafety, pChild, pEast;
+                          pMcauliffe, pSweeney, pStudentCenter, pTechnology, pSafety, pChild, pEast;
 
     private static final String TAG = MapsMarkerActivity.class.getSimpleName();
 
@@ -146,7 +132,7 @@ public class MapsMarkerActivity extends AppCompatActivity
                 mDrawerLayout.openDrawer(mNavigationView);
             }
         });
-        //////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
 
     }//onCreate
 
@@ -222,22 +208,76 @@ public class MapsMarkerActivity extends AppCompatActivity
                                 .target(mMacrury.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
                         MapsMarkerActivity.mMacrury.showInfoWindow();
                         break;
-                    default:
+                    case R.id.nav_grappone:
                         mDrawerLayout.closeDrawers();
                         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
                                 .target(mGrappone.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
                         MapsMarkerActivity.mGrappone.showInfoWindow();
+                        break;
+                    case R.id.nav_farnum:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mFarnum.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mFarnum.showInfoWindow();
+                        break;
+                    case R.id.nav_safety:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mSafety.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mSafety.showInfoWindow();
+                        break;
+                    case R.id.nav_south:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mSouth.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mSouth.showInfoWindow();
+                        break;
+                    case R.id.nav_north:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mNorth.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mNorth.showInfoWindow();
+                        break;
+                    case R.id.nav_strout:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mStrout.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mStrout.showInfoWindow();
+                        break;
+                    case R.id.nav_technology:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mTechnology.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mTechnology.showInfoWindow();
+                        break;
+                    case R.id.nav_police:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mPolice.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mPolice.showInfoWindow();
+                        break;
+                    case R.id.nav_mcaliffe:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mMcauliffe.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mMcauliffe.showInfoWindow();
+                        break;
+                    case R.id.nav_child:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(mChild.getPosition()).zoom(17f).bearing(0).tilt(0).build()));
+                        MapsMarkerActivity.mChild.showInfoWindow();
+                        break;
+                    default:
+                        mDrawerLayout.closeDrawers();
+                        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                                .target(nhti).zoom(17f).bearing(0).tilt(0).build()));
                         break;
 
                 }//end of switch statement
                 return true;
             }
         });
-
-
     }
-
-
-
 
 }

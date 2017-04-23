@@ -3,42 +3,72 @@
 
     <item android:title="NHTI Campus">
         <menu>
-        <item
-            android:id="@+id/nav_sweeney"
-            android:icon="@drawable/ic_sweeney"
-            android:title="Sweeney Hall" />
-        <item
-            android:id="@+id/nav_student_center"
-            android:icon="@drawable/ic_test"
-            android:title="Student Center" />
-        <item
-            android:id="@+id/nav_library"
-            android:icon="@drawable/ic_library"
-            android:title="Library" />
-        <item
-            android:id="@+id/nav_little"
-            android:icon="@drawable/ic_little"
-            android:title="Little Hall" />
-        <item
-            android:id="@+id/nav_macrury"
-            android:icon="@drawable/ic_macrury"
-            android:title="MacRury Hall" />
+            <item
+                android:id="@+id/nav_sweeney"
+                android:icon="@drawable/ic_sweeney"
+                android:title="Sweeney Hall" />
+            <item
+                android:id="@+id/nav_student_center"
+                android:icon="@drawable/ic_test"
+                android:title="Student Center" />
+            <item
+                android:id="@+id/nav_library"
+                android:icon="@drawable/ic_library"
+                android:title="Library" />
+            <item
+                android:id="@+id/nav_little"
+                android:icon="@drawable/ic_little"
+                android:title="Little Hall" />
+            <item
+                android:id="@+id/nav_macrury"
+                android:icon="@drawable/ic_macrury"
+                android:title="MacRury Hall" />
+            <item
+                android:id="@+id/nav_grappone"
+                android:icon="@drawable/ic_grappone"
+                android:title="Grappone Hall" />
+            <item
+                android:id="@+id/nav_farnum"
+                android:icon="@drawable/ic_farnum"
+                android:title="Farnum Hall" />
+            <item
+                android:id="@+id/nav_safety"
+                android:icon="@drawable/ic_campussafety"
+                android:title="Campus Safety" />
+            <item
+                android:id="@+id/nav_south"
+                android:icon="@drawable/ic_south"
+                android:title="South Hall" />
+            <item
+                android:id="@+id/nav_north"
+                android:icon="@drawable/ic_north"
+                android:title="North Hall" />
+            <item
+                android:id="@+id/nav_strout"
+                android:icon="@drawable/ic_test"
+                android:title="Strout Hall" />
+            <item
+                android:id="@+id/nav_technology"
+                android:icon="@drawable/ic_ctc"
+                android:title="College System Office" />
         </menu>
     </item>
-<!--
 
-    <item android:title="Communicate">
-        <menu>
+     <group>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_sweeney"
-                android:title="Share" />
+                android:id="@+id/nav_police"
+                android:icon="@drawable/ic_test"
+                android:title="Police Standards and Training" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_sweeney"
-                android:title="Send" />
-        </menu>
-    </item>
--->
-
+                android:id="@+id/nav_mcaliffe"
+                android:icon="@drawable/ic_test"
+                android:title="McAuliffe-Shepard Discovery Center" />
+            <item
+                android:id="@+id/nav_child"
+                android:icon="@drawable/ic_child"
+                android:title="Child and Family Development" />
+            <item
+                android:id="@+id/center_map"
+                android:title="Center Map" />
+    </group>
 </menu>

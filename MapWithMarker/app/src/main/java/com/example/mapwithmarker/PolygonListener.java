@@ -58,8 +58,8 @@ public class PolygonListener {
                         MapsMarkerActivity.mTechnology.showInfoWindow();
                         break;
                     case 9:
-                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mSafetey.getPosition()));
-                        MapsMarkerActivity.mSafetey.showInfoWindow();
+                        mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mSafety.getPosition()));
+                        MapsMarkerActivity.mSafety.showInfoWindow();
                         break;
                     case 10:
                         mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mPolice.getPosition()));
@@ -81,7 +81,7 @@ public class PolygonListener {
                         mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mChild.getPosition()));
                         MapsMarkerActivity.mChild.showInfoWindow();
                         break;
-                    case 15:
+                    default:
                         mMap.animateCamera(CameraUpdateFactory.newLatLng(MapsMarkerActivity.mEast.getPosition()));
                         MapsMarkerActivity.mEast.showInfoWindow();
                         break;
@@ -90,8 +90,5 @@ public class PolygonListener {
                 }//end of switch statement
             }
         });
-
     }
-
-
 }

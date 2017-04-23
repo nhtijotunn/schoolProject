@@ -92,11 +92,13 @@
             app:layout_constraintVertical_bias="1.0">
 
             <android.support.design.widget.TabItem
+                android:id="@+id/icons_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@android:drawable/ic_dialog_map" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/names_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@android:drawable/ic_lock_idle_lock" />
