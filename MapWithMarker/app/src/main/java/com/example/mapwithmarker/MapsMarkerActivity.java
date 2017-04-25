@@ -1,15 +1,20 @@
 package com.example.mapwithmarker;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.text.SpannableString;
+import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,7 +28,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.Polygon;
-
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
@@ -95,6 +99,8 @@ public class MapsMarkerActivity extends AppCompatActivity
     private GoogleMap mMap;
     private NavigationView mNavigationView;
     private DrawerLayout mDrawerLayout;
+    private EditText searchbar;
+    private MapLocation[] locations;
 
     public final LatLng nhti = new LatLng(43.223881, -71.531651);
 
@@ -103,7 +109,7 @@ public class MapsMarkerActivity extends AppCompatActivity
     mNorth, mPolice, mSafety, mStudentCenter, mTechnology, mChild, mEast;
 
     public static Polygon pLibrary, pGrappone, pPolice, pNorth, pSouth, pStrout, pLittle, pFarnum, pMacRury,
-                          pMcauliffe, pSweeney, pStudentCenter, pTechnology, pSafety, pChild, pEast;
+                          pMcauliffe, pSweeney, pStudentCenter, pTechnology, pSafety, pChild;
 
     private static final String TAG = MapsMarkerActivity.class.getSimpleName();
 
@@ -117,6 +123,34 @@ public class MapsMarkerActivity extends AppCompatActivity
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        ///////////////////////SEARCH BAR////////////////////////
+
+        searchbar = (EditText)findViewById(R.id.editText);
+        setLocations();
+        searchbar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+               if(searchLocation(searchbar.getText().toString(), locations)){
+                   //Toast.makeText(MapsMarkerActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                   mDrawerLayout.closeDrawers();
+                   InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                   in.hideSoftInputFromWindow(searchbar.getApplicationWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+               }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         //////////////////NAVIGATION DRAWER////////////////////
 
@@ -278,6 +312,118 @@ public class MapsMarkerActivity extends AppCompatActivity
                 return true;
             }
         });
+    }
+
+    public boolean searchLocation(String query, MapLocation[] locations){
+        for (int i = 0; i < locations.length; i++){ //For each location that exists
+            for (int o = 0; o < locations[i].locNames.length; o++){ //For each name of each location
+                if (locations[i].locNames[o].equals(query)){ //If that name is equivilant to what was searched...
+                    mMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                            .target(locations[i].latLng).zoom(18f).bearing(0).tilt(0).build()));
+                    //locations[i].mMap.easeCamera(CameraUpdateFactory.newLatLngBounds(locations[i].camBounds, 50), 1000);
+                    //This slides the camera from it's current position to the coordinates of the location
+                    return true; //The location was found
+                }
+            }
+        }
+        return false; //The location was not found in the above loop
+    }
+
+    public void setLocations(){
+
+        LatLng little = new LatLng(43.222906, -71.531441);
+        LatLng grappone = new LatLng(43.222816, -71.532857);
+        LatLng mcauliffe = new LatLng(43.224111, -71.532598);
+        LatLng library = new LatLng(43.224308, -71.530318);
+        LatLng sweeney = new LatLng(43.224551, -71.531524);
+        LatLng mcrury = new LatLng(43.223426, -71.532185);
+        LatLng farnum = new LatLng(43.223340, -71.531418);
+        LatLng stroutLocation = new LatLng(43.221474, -71.532201);
+        LatLng southLocation = new LatLng(43.220771, -71.532666);
+        LatLng northLocation = new LatLng(43.226108, -71.530679);
+        LatLng policeLocation = new LatLng(43.225695, -71.532453);
+        LatLng safetyLocation = new LatLng(43.224294, -71.534146);
+        LatLng studentCenterLocation = new LatLng(43.224643, -71.530896);
+
+        locations = new MapLocation[15];
+
+        locations[0] = (new MapLocation(
+                mMap,
+                new String[]{"sweeney", "sweeney hall", "sweeny", "sweeny hall", "Sweeney", "Sweeney Hall", "sweenie", "hell"},
+                sweeney
+        ));
+        locations[1] = (new MapLocation(
+                mMap,
+                new String[]{"grappone", "grapponey", "grappone hall", "Grappone", "Grappone Hall"},
+                grappone
+        ));
+        locations[2] = (new MapLocation(
+                mMap,
+                new String[]{"little", "little hall", "littel", "Little", "Little Hall"},
+                little
+        ));
+        locations[3] = (new MapLocation(
+                mMap,
+                new String[]{"farnum", "Farnum", "farnum hall", "farnumhall", "Farnum Hall"},
+                farnum
+        ));
+        locations[4] = (new MapLocation(
+                mMap,
+                new String[]{"studentcenter", "student center", "Student center","Student Center", "Studentcenter", "lobby" },
+                studentCenterLocation
+        ));
+        locations[5] = (new MapLocation(
+                mMap,
+                new String[]{"library", "Library", "bookstore", "books"},
+                library
+        ));
+        locations[6] = (new MapLocation(
+                mMap,
+                new String[]{"macrury", "MacRury", "Macrury", "mcrury", "Mcrury", "macrury hall"},
+                mcrury
+        ));
+        locations[7] = (new MapLocation(
+                mMap,
+                new String[]{"mcauliffe", "planetarium", "space center", "Mcaullife"},
+                mcauliffe
+        ));
+        locations[8] = (new MapLocation(
+                mMap,
+                new String[]{"strout","Strout", "strout hall", "Strout Hall"},
+                stroutLocation
+        ));
+        locations[9] = (new MapLocation(
+                mMap,
+                new String[]{"north", "North", "north hall", "North Hall"},
+                northLocation
+        ));
+
+        locations[10] = (new MapLocation(
+                mMap,
+                new String[]{"south", "South", "south hall", "South Hall"},
+                southLocation
+        ));
+        locations[11] = (new MapLocation(
+                mMap,
+                new String[]{"police", "Police", "police academy"},
+                policeLocation
+        ));
+        locations[12] = (new MapLocation(
+                mMap,
+                new String[]{"campus safety", "campus safe", "safety", "Safety", "Campus safety", "Campus Safety"},
+                safetyLocation
+        ));
+        locations[13] = (new MapLocation(//child
+                mMap,
+                new String[]{"child", "Child"},
+                new LatLng(43.222839, -71.530370)
+        ));
+        locations[14] = (new MapLocation(//tech
+                mMap,
+                new String[]{"technology services", "ctc", "college system office", "system", "technology"},
+                new LatLng(43.223524, -71.530904)
+        ));
+
     }
 
 }

@@ -17,6 +17,7 @@ import java.util.Date;
 
 public class MapSetup {
 
+
     public static void setPolygons(GoogleMap mMap) {
 
         // id = pg0  ONLY ADD NEW POLYGONS FROM THE BOTTOM
@@ -229,17 +230,15 @@ public class MapSetup {
                 .anchor(0.5f, 0.5f)
                 .title("Little Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.hLittle)+
-                        "\nLittle's Content\n" +
-                        "Content\n"));
+                        "\nFood Court\n"));
         MapsMarkerActivity.mGrappone = mMap.addMarker(new MarkerOptions().position(grappone)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_grappone))
                 .anchor(0.5f, 0.5f)
                 .title("Grappone Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.hGrappone)+
-                        "\nGrappone's Content\n" +
-                        "Content\n"));
+                        "\nComputer Lab\n"));
         MapsMarkerActivity.mMcauliffe = mMap.addMarker(new MarkerOptions().position(mcauliffe)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_mcauliffe))
                 .anchor(0.5f, 0.5f)
                 .title("McAuliffe-Shepard Discovery Center\n")
                 .snippet(dotwBuilder(day, BuildingHours.hMcAuliffe)+
@@ -274,7 +273,7 @@ public class MapSetup {
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mStrout = mMap.addMarker(new MarkerOptions().position(stroutLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_strout))
                 .anchor(0.5f, 0.5f)
                 .title("Strout Hall\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
@@ -295,7 +294,7 @@ public class MapSetup {
                         "\nContent\n" +
                         "Content\n"));
         MapsMarkerActivity.mStudentCenter = mMap.addMarker(new MarkerOptions().position(studentCenterLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_student))
                 .anchor(0.5f, 0.5f)
                 .title("Student Center\n")
                 .snippet(dotwBuilder(day, BuildingHours.hStudentCenter)+
@@ -310,7 +309,7 @@ public class MapSetup {
                         "Content\n"));
 
         MapsMarkerActivity.mPolice = mMap.addMarker(new MarkerOptions().position(policeLocation)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_test))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_police))
                 .anchor(0.5f, 0.5f)
                 .title("Police Standards and Training\n")
                 .snippet(dotwBuilder(day, BuildingHours.template)+
@@ -384,6 +383,10 @@ public class MapSetup {
             badge = R.drawable.ctc_photo;
         } else if (marker.equals(MapsMarkerActivity.mSafety)) {
             badge = R.drawable.safety_photo;
+        } else if (marker.equals(MapsMarkerActivity.mLibrary)) {
+            badge = R.drawable.library_photo;
+        } else if (marker.equals(MapsMarkerActivity.mMcauliffe)) {
+            badge = R.drawable.mcaullife_photo;
         } else {
             // Passing 0 to setImageResource will clear the image view.
             badge = 0;

@@ -9,7 +9,7 @@
                 android:title="Sweeney Hall" />
             <item
                 android:id="@+id/nav_student_center"
-                android:icon="@drawable/ic_test"
+                android:icon="@drawable/ic_student"
                 android:title="Student Center" />
             <item
                 android:id="@+id/nav_library"
@@ -45,7 +45,7 @@
                 android:title="North Hall" />
             <item
                 android:id="@+id/nav_strout"
-                android:icon="@drawable/ic_test"
+                android:icon="@drawable/ic_strout"
                 android:title="Strout Hall" />
             <item
                 android:id="@+id/nav_technology"
@@ -57,18 +57,18 @@
      <group>
             <item
                 android:id="@+id/nav_police"
-                android:icon="@drawable/ic_test"
+                android:icon="@drawable/ic_police"
                 android:title="Police Standards and Training" />
             <item
                 android:id="@+id/nav_mcaliffe"
-                android:icon="@drawable/ic_test"
-                android:title="McAuliffe-Shepard Discovery Center" />
+                android:icon="@drawable/ic_mcauliffe"
+                android:title="McAuliffe-Shepard" />
             <item
                 android:id="@+id/nav_child"
                 android:icon="@drawable/ic_child"
                 android:title="Child and Family Development" />
             <item
                 android:id="@+id/center_map"
-                android:title="Center Map" />
+                android:title="return" />
     </group>
 </menu>

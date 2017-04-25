@@ -16,8 +16,20 @@
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_north.png"
     },
     {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_glow.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_glow.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_student.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_student.png"
+    },
+    {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_macrury.png",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_macrury.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_strout.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_strout.png"
     },
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_grappone.png",
@@ -38,6 +50,14 @@
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_test.png",
         "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_test.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_mcauliffe.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_mcauliffe.png"
+    },
+    {
+        "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_police.png",
+        "source": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\src\\main\\res\\drawable-hdpi\\ic_police.png"
     },
     {
         "merged": "C:\\Users\\Johnny\\Documents\\GitHub\\schoolProject\\MapWithMarker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_campussafety.png",
